@@ -2,10 +2,10 @@
   "name": "express-admin-honeypot",
   "version": "0.0.1",
   "author": {
-	"name": "Ali nazari",
-	"email": "backendwithali@gmail.com",
-	"url": "https://alitte.vercel.app/"
-},
+    "name": "Ali nazari",
+    "email": "backendwithali@gmail.com",
+    "url": "https://alitte.vercel.app/"
+  },
   "description": "An advanced honeypot package for Node.js admin endpoints, inspired by django-admin-honeypot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -45,11 +45,13 @@
     "@biomejs/biome": "1.9.4",
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.13",
+    "@types/supertest": "^6.0.3",
     "@vitest/coverage-istanbul": "^3.0.9",
     "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^6.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
+    "supertest": "^7.1.0",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
