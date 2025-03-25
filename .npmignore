@@ -15,3 +15,6 @@ biome.json
 
 .gitattributes
 .gitignore
+
+.husky
+.github
