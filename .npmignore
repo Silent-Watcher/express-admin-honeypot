@@ -1,0 +1,17 @@
+/src
+/node_modules
+.vscode
+
+tsconfig.json
+tsup.config.ts
+
+vitest.config.ts
+tests
+coverage
+
+biome.json
+.lintstagedrc.json
+.editorconfig
+
+.gitattributes
+.gitignore

@@ -1,0 +1,8 @@
+lint-staged && (
+  if find . -type f \( -name "*.test.ts" -o -name "*.spec.ts" \) | grep -q .; then
+    npm test;
+  else
+    echo "No test files found, skipping tests";
+    exit 0;
+  fi
+)
