@@ -6,6 +6,9 @@
     "email": "backendwithali@gmail.com",
     "url": "https://alitte.vercel.app/"
   },
+  "repository": {
+	"url": "https://github.com/Silent-Watcher/express-admin-honeypot"
+  },
   "description": "An advanced honeypot package for Node.js admin endpoints, inspired by django-admin-honeypot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
