@@ -2,6 +2,8 @@
 
 [![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![minizipped size](https://badgen.net/bundlephobia/minzip/express-admin-honeypot)](https://bundlephobia.com/package/express-admin-honeypot@1.0.4)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight Express middleware that protects your admin routes by serving a decoy (honeypot) page. Intrusion attempts are logged using your preferred logging library (Winston, Pino, etc.) and can either redirect attackers to a fake URL or display a default customizable HTML template.
 
