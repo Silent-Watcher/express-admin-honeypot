@@ -50,7 +50,7 @@ Import and use the middleware in your Express application. By default, it will p
 
 ```ts
 import express from 'express';
-import {honeypot} from 'node-admin-honeypot';
+import {honeypot} from 'express-admin-honeypot';
 
 const app = express();
 
