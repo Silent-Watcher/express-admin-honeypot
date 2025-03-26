@@ -1,6 +1,7 @@
 /src
 /node_modules
 .vscode
+docs
 
 tsconfig.json
 tsup.config.ts

@@ -18,6 +18,8 @@ A lightweight Express middleware that protects your admin routes by serving a de
 	- [Logger Integration](#logger-integration)
 		- [Using Pino](#using-pino)
 		- [using winston](#using-winston)
+	- [Honeypot Events](#honeypot-events)
+		- [Available Events](#available-events)
 	- [Configuration](#configuration)
 	- [Issues and Contributing](#issues-and-contributing)
 	- [License](#license)
@@ -62,6 +64,8 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => console.log('Server running on port 3000'));
 ```
+
+![result](./docs/result.png)
 
 ### Redirecting to a Fake URL
 
@@ -130,6 +134,43 @@ const logger = winston.createLogger({
 app.use(honeypot({
   logger,
 }));
+```
+
+## Honeypot Events
+
+node-admin-honeypot is designed to be event-driven, allowing you to hook into its operation and extend its functionality with custom logic. This feature is especially useful for integrating additional monitoring, alerting, or even IP-blocking systems when unauthorized access attempts occur.
+
+### Available Events
+
+`honeypotHit`
+
+- Description: Emitted whenever an unauthorized access attempt is detected on the protected admin route.
+- Payload: The event passes an object containing useful details about the intrusion, including:
+  - `ip`: The IP address of the client making the request.
+  - `userAgent`: The user agent string of the client.
+
+```js
+import express from 'express';
+import { honeypot } from 'express-admin-honeypot';
+import EventEmitter from "events";
+
+const honeypotEventEmitter = new EventEmitter();
+honeypotEventEmitter.on('honeypotHit', (data) => {
+  console.log('from events:', data);
+});
+
+const app = express();
+
+app.use(honeypot({
+  eventEmitter: honeypotEventEmitter
+}));
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the real app!');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
+
 ```
 
 ## Configuration
